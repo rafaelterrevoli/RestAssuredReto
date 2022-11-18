@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Validation userid 1" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-18T09:24:23" hostname="MacBook-Air-de-Rafael.local" time="0.27">
+  <properties/>
+  <testcase name="Send a valid Request to get user details" classname="Validation userid 1" time="0.27"/>
+  <system-out><![CDATA[Nombre: Leanne Graham
+El ultimo postId del userId numero 1 es: 10
+name del primer comentario: dignissimos et deleniti voluptate et quod
+email del primer cometario: Jeremy.Harann@waino.me
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Validation userid 10" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-18T09:24:22" hostname="MacBook-Air-de-Rafael.local" time="1.117">
+  <properties/>
+  <testcase name="Send a valid Request to get user details" classname="Validation userid 10" time="1.117"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
