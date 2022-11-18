@@ -13,12 +13,13 @@ import static org.hamcrest.Matchers.is;
 
 public class FeaturesSteps {
 
-    @Given("^I send a request GET to the (.+) to get id (.+) and name (.+)$")
-    public void iSendARequestGETToTheUserToGetUseridAndName(String endpoint, String userid, String name) {
+    @Given("^I send a request GET to the (.+) to get id (.+)$")
+    public void iSendARequestGETToTheUserToGetUseridAndName(String endpoint, String id) {
         Response response = when().get(endpoint);
         assertThat(response.getStatusCode(),equalTo(200));
-        assertThat(response.jsonPath().getString("id["+userid+"]"),equalTo("10"));
-        assertThat(response.jsonPath().getString("name["+userid+"]"),equalTo(name));
+        int idIni = Integer.parseInt(id) - 1;
+        String idEnd = String.valueOf(idIni);
+        assertThat(response.jsonPath().getString("id["+idEnd+"]"),equalTo(id));
     }
 
     @And("^I send a request GET to (.+) and validate that userid (.+) the titles and bodies are not empty$")
@@ -97,48 +98,4 @@ public class FeaturesSteps {
             }
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        List<String> myList = new ArrayList<String>(Arrays.asList(responseBody.split(",")));
-
-        for (String i : myList) {
-            System.out.println("Correo: " + i);
-        }
-            */
-        /*
-        Map<String, String> test = response.jsonPath().getMap("data");
-        System.out.println(test);
-        String id = test.get("id");
-        System.out.println("ID : " + id);
-
-        */
-        /*
-        List<Integer> ListuserId = response.jsonPath().getList("userId");
-        List<Integer> ListuserId = response.jsonPath().getMap();
-            //System.out.println("id: " + i);
-            if(i == 10) {
-                System.out.println(response.jsonPath().getString("title"));
-            }
-        }
-    */
-        /*
-        List<String> ListResponse = response.jsonPath().getList("title");
-        int longList = ListResponse.size();
-        System.out.println(longList);
-
-        for (String i : ListResponse) {
-            System.out.println("Correo: " + i);
-        }*/
-
 }
